@@ -1,29 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume Updater</title>
+    <!-- Include Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-    <div class="container mt-5">
-        <h1>Resume Updater</h1>
+<div class="container">
+    <h2>Update Your Resume</h2>
+    <form action="/upload/" method="post" enctype="multipart/form-data">
         <div class="form-group">
-            <label for="resumeUpload">Upload Your Resume (Word or PDF):</label>
-            <input type="file" class="form-control-file" id="resumeUpload">
+            <label for="resume">Upload Your Resume:</label>
+            <input type="file" id="resume" name="resume" required>
         </div>
         <div class="form-group">
-            <label for="jobDesc">Paste Job Description Text:</label>
-            <textarea class="form-control" id="jobDesc" rows="5"></textarea>
+            <label for="job_description">Job Description:</label>
+            <textarea id="job_description" name="job_description" rows="4" required></textarea>
         </div>
-        <button type="button" class="btn btn-primary" id="processButton">Process</button>
-        <button type="button" class="btn btn-success" id="downloadButton" disabled>Download Updated Resume</button> 
-    </div>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script> 
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="script.js"></script> 
+        <button type="submit" class="btn btn-primary">Update Resume</button>
+    </form>
+</div>
+<!-- Include Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
